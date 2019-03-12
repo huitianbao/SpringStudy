@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="date" class="com.property.Date">
+		<!-- 数组 -->
+		<property name="array">
+			<list>
+				<value>array1</value>
+				<value>array2</value>
+			</list>
+		</property>
+
+
+		<!--list -->
+		<property name="list">
+			<list>
+				<value>list1</value>
+				<value>list2</value>
+			</list>
+		</property>
+
+		<!-- map -->
+		<property name="map">
+			<map>
+				<entry key="1" value="map1"></entry>
+				<entry key="2" value="map2"></entry>
+			</map>
+		</property>
+
+		<!-- properties -->
+		<property name="properties">
+			<props>
+				<prop key="driver">com.sql.jdbc.Driver</prop>
+				<prop key="username">root</prop>
+			</props>
+
+		</property>
+
+
+	</bean>
+
+</beans>

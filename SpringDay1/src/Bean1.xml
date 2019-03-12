@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+	<!-- ioc 入门 -->
+	<!-- <bean id="user" class="com.htb.User"></bean> <bean id="bean2" class="com.bean.Bean2Factory" 
+		factory-method="getBean2"></bean> -->
+
+	<!-- 实例工厂 -->
+
+	<!-- <bean id="bean3Factory" class="com.bean.Bean3Factory"></bean> <bean 
+		id="bean3" factory-bean="bean3Factory" factory-method="getBean3"></bean> -->
+
+
+	<!-- 属性注入 有参数 -->
+	<!-- <bean id="demo11" class="com.property.PropertyDemo1"> <constructor-arg 
+		name="Demo1" value="惠天宝。。。。。"></constructor-arg> </bean> -->
+
+
+	<!-- set 注入属性 -->
+
+	<bean id="book" class="com.property.Book">
+		<property name="book" value="格林童话"></property>
+	</bean>
+
+	<bean id="userDao" class="com.property.userService.UserDao"></bean>
+	<bean id="userService" class="com.property.userService.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<!-- <bean id="person" class="com.property.Person" p:pname="cccccccccccccccccccccc"></bean> -->
+</beans>
